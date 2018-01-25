@@ -1,6 +1,6 @@
 {
   "name": "react-router",
-  "version": "0.13.6",
+  "version": "0.13.6-compat",
   "description": "A complete routing library for React.js",
   "main": "lib",
   "repository": {
@@ -19,8 +19,10 @@
   },
   "dependencies": {
     "can-use-dom": "0.1.0",
+    "create-react-class": "^15.6.2",
     "invariant": "^2.0.0",
     "object-assign": "^2.0.0",
+    "prop-types": "^15.6.0",
     "qs": "2.4.1"
   },
   "tags": [

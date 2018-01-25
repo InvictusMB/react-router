@@ -6,13 +6,14 @@ var DefaultRoute = require('./components/DefaultRoute');
 var NotFoundRoute = require('./components/NotFoundRoute');
 var Redirect = require('./components/Redirect');
 var Route = require('./Route');
+var ReactPropTypes = require('prop-types');
 
 function checkPropTypes(componentName, propTypes, props) {
   componentName = componentName || 'UnknownComponent';
 
   for (var propName in propTypes) {
     if (propTypes.hasOwnProperty(propName)) {
-      var error = propTypes[propName](props, propName, componentName);
+      var error = ReactPropTypes.checkPropTypes(propTypes, props, propName, componentName);
 
       if (error instanceof Error)
         warning(false, error.message);
